@@ -9,6 +9,6 @@ return {
   { import = "astrocommunity.pack.python.base" },
   { import = "astrocommunity.pack.python.basedpyright" },
   { import = "astrocommunity.pack.python.ruff" },
-  -- { import = "astrocommunity.ai.codecompanion-nvim" },
+  { import = "astrocommunity.ai.codecompanion-nvim" },
   -- import/override with your plugins folder
 }
