@@ -11,7 +11,7 @@ return {
         ollama = function()
           return require("codecompanion.adapters").extend("ollama", {
             env = {
-              url = "http://1.208.108.242:11434",
+              url = "http://1.208.108.242:37144",
               api_key = "b003ca6cade39cac388baa1b870ae5aeece97eb7533d4215763f1bf8e5d65b9b",
             },
             headers = {
