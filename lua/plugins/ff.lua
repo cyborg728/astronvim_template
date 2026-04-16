@@ -7,7 +7,6 @@ return {
           mouse = "",
           -- fixeol = false,
           list = true,
-          exrc = true,
           listchars = {
             eol = "¬",
           }
