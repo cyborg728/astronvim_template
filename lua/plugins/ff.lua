@@ -1,5 +1,3 @@
-if true then return {} end
-
 return {
   {
     "AstroNvim/astrocore",
@@ -7,6 +5,12 @@ return {
       options = {
         opt = {
           mouse = "",
+          -- fixeol = false,
+          list = true,
+          exrc = true,
+          listchars = {
+            eol = "¬",
+          }
         },
       },
     },

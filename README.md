@@ -1,3 +1,9 @@
+# How to exclude files from search "<leader>ff"
+
+- install fd
+
+- add .fdignore (same .gitignore syntax) into project folde
+
 # AstroNvim Template
 
 **NOTE:** This is for AstroNvim v6+
