@@ -61,7 +61,7 @@ return {
               env = {
                 -- url = "http://127.0.0.1:11434",
                 url = "https://ollama.com",
-                api_key = "6a3adf6b3d2e406d8271bd5a4f254bc7.RVZN-B_C2f5hAhq1ZM9ucMDA",
+                api_key = "",
               },
               headers = {
                 ["Authorization"] = "Bearer ${api_key}",
@@ -80,7 +80,7 @@ return {
           gemini_flash = function()
             return require("codecompanion.adapters").extend("gemini", {
               env = {
-                api_key = "AIzaSyBc6A_qecC_kRdnws5vs13LYLBujOkRumY",
+                api_key = "",
               },
               schema = {
                 model = {
