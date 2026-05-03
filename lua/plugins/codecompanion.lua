@@ -10,6 +10,11 @@ return {
       history = {
         enabled = true,
         opts = {
+          auto_generate_title = false,
+          -- title_generation_opts = {
+          --   adapter = "gemini_flash",
+          --   model = "gemini-2.5-flash-lite",
+          -- },
           keymap = "gh",
           auto_save = true,
         },
@@ -23,7 +28,7 @@ return {
             env = {
               -- url = "http://127.0.0.1:11434",
               url = "https://ollama.com",
-              api_key = "1175abe8a1e24ac0baaf25e4614053e9.9MEZXfceh3mEG8cc7YZ0s-am",
+              api_key = os.getenv "OLLAMA_API_KEY",
             },
             headers = {
               ["Authorization"] = "Bearer ${api_key}",
@@ -42,7 +47,7 @@ return {
         gemini_flash = function()
           return require("codecompanion.adapters").extend("gemini", {
             env = {
-              api_key = "AIzaSyDF2pXm8uGEf0gVf_nPLtfF0Qx0YBVRJYY",
+              api_key = os.getenv "GEMINI_API_KEY",
             },
             schema = {
               model = {
@@ -59,6 +64,7 @@ return {
         opts = {
           system_prompt = function(opts_)
             local project_md = vim.fn.getcwd() .. "/.codecompanion.md"
+            -- vim.notify("Looking for: " .. project_md) -- убрать после проверки
             if vim.fn.filereadable(project_md) == 1 then return table.concat(vim.fn.readfile(project_md), "\n") end
             return opts_.default_system_prompt or "test"
           end,
