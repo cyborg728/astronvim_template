@@ -16,6 +16,11 @@ or inside chat buffer
 /global: name
 ```
 
+# Codecompanion check system prompt
+```vim
+:lua local sp = require("codecompanion.config").interactions.chat.opts.system_prompt; if type(sp) == "function" then print(sp({})) else print(sp) end
+```
+
 # AstroNvim Template
 
 **NOTE:** This is for AstroNvim v6+
