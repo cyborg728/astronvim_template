@@ -5,6 +5,12 @@ return {
     "nvim-treesitter/nvim-treesitter",
     "ravitemer/codecompanion-history.nvim",
   },
+  itin = {
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "codecompanion",
+      callback = function() vim.wo.winfixbuf = true end,
+    }),
+  },
   opts = {
     extensions = {
       history = {
