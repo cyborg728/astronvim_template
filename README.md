@@ -4,6 +4,18 @@
 
 - add .fdignore (same .gitignore syntax) into project folde
 
+# Codecompanion plugin
+.codecompanion.md file inside project folder store system prompt.
+
+# Codecompanion skills
+```sh
+:CodeCompanionActions
+```
+or inside chat buffer 
+```text
+/global: name
+```
+
 # AstroNvim Template
 
 **NOTE:** This is for AstroNvim v6+
