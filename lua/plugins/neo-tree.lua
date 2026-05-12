@@ -6,6 +6,13 @@ return {
         enabled = true, -- This makes the tree follow the file
         leave_dirs_open = true, -- This is the key: prevents collapsing
       },
+      filtered_items = {
+        always_show_by_pattern = {
+          ".env*",
+          ".gitignore",
+          ".gitkeep",
+        },
+      },
     },
     window = {
       mappings = {
