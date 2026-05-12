@@ -2,7 +2,7 @@
 
 - install fd
 
-- add .fdignore (same .gitignore syntax) into project folde
+- add .fdignore (same .gitignore syntax) into project folder for extend hide files in skacks.picker (<leader>ff)
 
 # Codecompanion plugin
 .codecompanion.md file inside project folder store system prompt.
