@@ -32,7 +32,6 @@ return {
         ollama_api = function()
           return require("codecompanion.adapters").extend("ollama", {
             env = {
-              -- url = "http://127.0.0.1:11434",
               url = "https://ollama.com",
               api_key = os.getenv "OLLAMA_API_KEY",
             },
@@ -43,6 +42,10 @@ return {
             schema = {
               model = {
                 default = "glm-5.1:cloud",
+                choices = {
+                  "glm-5.1:cloud",
+                  "deepseek-v4-pro:cloud",
+                },
               },
               -- num_ctx = {
               --   default = 16384,
