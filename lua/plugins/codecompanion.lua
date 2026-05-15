@@ -45,6 +45,7 @@ return {
                 choices = {
                   "glm-5.1:cloud",
                   "deepseek-v4-pro:cloud",
+                  "gemma4:31b-cloud",
                 },
               },
               -- num_ctx = {
@@ -70,14 +71,17 @@ return {
     interactions = {
       chat = {
         adapter = "ollama_api",
-        opts = {
-          system_prompt = function(opts_)
-            local project_md = vim.fn.getcwd() .. "/.codecompanion.md"
-            -- vim.notify("Looking for: " .. project_md) -- убрать после проверки
-            if vim.fn.filereadable(project_md) == 1 then return table.concat(vim.fn.readfile(project_md), "\n") end
-            return opts_.default_system_prompt or "test"
-          end,
-        },
+        -- https://codecompanion.olimorris.dev/configuration/prompt-library#adding-prompts
+        -- https://codecompanion.olimorris.dev/configuration/rules
+        -- https://codecompanion.olimorris.dev/configuration/system-prompt
+        -- opts = {
+        --   system_prompt = function(opts_)
+        --     local project_md = vim.fn.getcwd() .. "/.codecompanion.md"
+        --     -- vim.notify("Looking for: " .. project_md) -- убрать после проверки
+        --     if vim.fn.filereadable(project_md) == 1 then return table.concat(vim.fn.readfile(project_md), "\n") end
+        --     return opts_.default_system_prompt or "test"
+        --   end,
+        -- },
       },
       -- inline = { adapter = "ollama" },
     },
