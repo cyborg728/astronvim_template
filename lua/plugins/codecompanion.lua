@@ -82,6 +82,12 @@ return {
         --     return opts_.default_system_prompt or "test"
         --   end,
         -- },
+        tools = {
+          searxng = {
+            path = "tools.searxg",
+            deasription = "Search via SearXNG",
+          },
+        },
       },
       -- inline = { adapter = "ollama" },
     },
